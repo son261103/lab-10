@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm sản phẩm mới</title>
+</head>
+<body>
+    <form id="productForm">
+        <label for="productName">Tên sản phẩm:</label>
+        <input type="text" id="productName" name="productName">
+
+        <label for="productPrice">Giá sản phẩm:</label>
+        <input type="text" id="productPrice" name="productPrice">
+
+        <button type="button" onclick="addProduct()">Thêm sản phẩm</button>
+    </form>
+
+    <div id="productList">
+        <!-- Danh sách sản phẩm sẽ được hiển thị ở đây -->
+    </div>
+
+    <script src="../js/regx.js"></script>
+</body>
+</html>

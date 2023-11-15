@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="zone1">
+        <h1>xác thực Email</h1>
+        <hr>
+        <form action="" method="post" name="frm">
+            <div>
+                <label for="Email">Email</label>
+                <input type="email" name="email" id="email" >
+                <span onchange="fncheck()">(*)</span>
+            </div>
+            <div>
+                <label for=""></label>
+                <input type="button" name="btnTinh" id="btnTinh" value="Tinh" onclick="fncheck()">
+            </div>
+            <div>
+                <label for="ketqua">Kết Quả</label>
+                <input type="email" name="ketqua" id="ketqua" >
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const fnkeycheck =()=>{
+            var email = document.getElementById('email').value;
+            var regx = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
+            if(regx.test(email)){
+                document.querySelectorAll("input[name='email'] + span")[0].innerHTML="ok"
+            }else{
+                document.querySelectorAll("input[name='email'] + span")[0].innerHTML="sai định dạng"
+            }
+        }
+        const fncheck = () =>{
+        var email = document.getElementById('email').value;
+        var regx = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
+        if(regx.test(email)){
+            console.log("Thỏa mãn");
+            ketqua.value="thỏa mãn";
+        }
+        else{
+            console.log("không thỏa mãn");
+            ketqua.value="không thỏa mãn";
+        }
+    }
+
+
+    //  thực phần kiểm tra dữ liệu form với DOM
+    </script>
+</body>
+</html>

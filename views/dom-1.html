@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Element - cú pháp tương tác</title>
+</head>
+<body>
+    <section id="zone1">
+        <h1>
+            Dom Element - cú pháp tương tác
+        </h1>
+        <pre>
+            - thông qua tên thẻ html : getElementByTagName
+            - thông qua thuộc tính id: getElementById
+            - thông qua thuộc tính class: getElementByClassName
+            - thông qua css Selector: querySelectAll
+        </pre>
+
+    </section>
+    <section id="zone2">
+        <h2>- thông qua tên thẻ html : getElementByTagName </h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus earum perspiciatis ipsam et nemo nobis. Nemo magni ut totam doloribus error fugit? Nisi facere reprehenderit omnis ut doloremque dolorum voluptatem.</p>
+
+        <script src="../js/dom-1.html">
+          let element = document.getElementsByTagName("h2");
+          element[0].style.color='Blue';
+          element = document.getElementsByTagName("p")
+          element[0].style.backgroundColor='green';
+        </script>
+    </section>
+
+    <section id="zone3">
+        <h2>- thông qua thuộc tính id: getElementById</h2>
+
+
+        <script>
+            idelement = document.getElementById("zone3");
+
+            idelement.style.backgroundColor = 'blue';
+        </script>
+    </section>
+
+
+    <section id="zone4">
+        <h2>
+            - thông qua thuộc tính class: getElementByClassName
+        </h2>
+        <p class="txt">
+            xin chào
+        </p>
+        <p class="txt">
+            xin chào
+        </p>
+        <p class="txt-1">
+            xin chào
+        </p>
+
+        <script>
+            // tương tác thông qua thuộc tính class
+            elem = document.getElementsByClassName("txt");
+            console.log(elem);
+            elem[0].style.color = "blue";
+            // elem.foreach(x => {
+            //     x.style.backgroundColor = "pink";
+            // })
+
+            for (let i = 0; i < element.length;i++){
+                const x = elem[i];
+                x.style.backgroundColor = "blue";
+                x.style.padding  ='1rem';
+            }
+        </script>
+
+
+        <section id="zone5">
+            <h2>- thông qua css Selector: querySelectAll</h2>
+
+            <script>
+                elem = document.querySelectorAll("h2");
+
+                console.log(elem);
+
+                for (let i = 0; i < element.length;i++){
+                const x = elem[i];
+                x.style.backgroundColor = "red";
+                x.style.padding  ='1rem';
+                x.innerHTML += " <span style='color=while'> xin chào </span>";
+            }
+            </script>
+        </section>
+    </section>
+</body>
+</html>

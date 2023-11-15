@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm sản phẩm mới</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form id="productForm">
+        <label for="productName">Item Title:</label>
+        <input type="text" id="productName" name="productName" required>
+        <span id="productNameError" class="error"></span>
+
+        <label for="productDescription">Item Description:</label>
+        <textarea id="productDescription" name="productDescription" rows="4" required></textarea>
+        <span id="productDescriptionError" class="error"></span>
+
+        <label for="productCategory">Item Category:</label>
+        <select id="productCategory" name="productCategory" required>
+            <option value="default">Chọn loại</option>
+            <option value="electronics">Electronics</option>
+            <option value="clothing">Clothing</option>
+            <option value="books">Books</option>
+        </select>
+        <span id="productCategoryError" class="error"></span>
+
+        <label for="productPrice">Giá sản phẩm:</label>
+        <input type="text" id="productPrice" name="productPrice" required>
+        <span id="productPriceError" class="error"></span>
+
+        <label for="productQuantity">Hộp Quantity:</label>
+        <input type="number" id="productQuantity" name="productQuantity" required>
+        <span id="productQuantityError" class="error"></span>
+
+        <label>
+            <input type="checkbox" id="paymentCharges" name="paymentCharges" required>
+            I have read and agree to the payment charges.
+        </label>
+        <span id="paymentChargesError" class="error"></span>
+
+        <button type="button" onclick="addProduct()">Thêm sản phẩm</button>
+    </form>
+
+    <div id="productList">
+        <!-- Danh sách sản phẩm sẽ được hiển thị ở đây -->
+    </div>
+
+    <script src="../js/regx-3.js"></script>
+</body>
+</html>
