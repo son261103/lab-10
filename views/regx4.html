@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode / Light Mode</title>
+    <style>
+        body {
+            transition: background-color 1s ease;
+        }
+        
+        .dark-mod {
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <label for="modeSelect">Chọn chế độ:</label>
+    <select id="modeSelect" onchange="toggleMode()">
+        <option value="light">Light Mode</option>
+        <option value="dark">Dark Mode</option>
+    </select>
+
+    <script>
+        function toggleMode() {
+            var modeSelect = document.getElementById("modeSelect");
+            var body = document.body;
+
+            if (modeSelect.value === "dark") {
+                body.classList.add("dark-mod");
+            } else {
+                body.classList.remove("dark-mod");
+            }
+        }
+    </script>
+
+</body>
+</html>
